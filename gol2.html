@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>gol2</title>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: white;
+            direction: rtl;
+            height: 95vh;
+            margin: 0;
+            font-family: sans-serif;
+            position: relative; /* برای اینکه دکمه درباره ما موقعیت‌دهی مطلق بگیره */
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 120px);
+        }
+
+        p {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        form {
+            margin: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 35px;
+            cursor: pointer;
+            font-size: 22px;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: gray;
+            color: white;
+        }
+
+        /* 👇 این بخش دکمه درباره ما رو می‌بره پایین سمت راست */
+        .about-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>چه خبر؟</h1>
+
+    <div class="center-content">
+        <p>تو چی هستی؟</p>
+
+        <form action="gol3.html">
+            <input type="submit" value="زن">
+        </form>
+        <form action="gol4.html">
+            <input type="submit" value="مرد">
+        </form>
+        <form action="gol5.html">
+            <input type="submit" value="سیاه پوست">
+        </form>
+    </div>
+
+    <!-- 👇 دکمه درباره ما، پایین سمت راست -->
+    <form action="gol6.html" class="about-btn">
+        <input type="submit" value="درباره ما">
+    </form>
+</body>
+</html>
