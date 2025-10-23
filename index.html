@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>gol ali</title>
+    <script>
+        function checkInput(event) {
+            const input = document.getElementById("textBox").value;
+            if (input.length < 3) {
+                alert("باید حداقل 3 کاراکتر وارد کنی ");
+                event.preventDefault(); // جلوی رفتن به صفحه بعد رو می‌گیره
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            direction: rtl;
+            height: 90vh; /* کل ارتفاع صفحه */
+            display: flex;
+            justify-content: center; /* وسط افقی */
+            align-items: center;     /* وسط عمودی */
+            flex-direction: column;  /* عناصر زیر هم */
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>gol for gol</h1>
+    <p>نام را وارد کنید</p>
+
+    <form action="gol2.html" onsubmit="checkInput(event)">
+        <input type="text" id="textBox" placeholder="متن بنویس">
+        <input type="submit" value="send">
+    </form>
+</body>
+</html>
