@@ -12,6 +12,7 @@
             align-items: center;        /* وسط افقی */
             justify-content: center;    /* وسط عمودی */
             font-family: sans-serif;
+            position: relative;         /* برای دکمه پایین سمت راست */
         }
 
         p {
@@ -29,16 +30,37 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        /* افکت ظاهر شدن نرم عکس */
         @keyframes fadeIn {
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
 
-        /* افکت نور و بزرگ شدن وقتی موس می‌ره روش */
         img:hover {
             transform: scale(1.05);
             box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+        }
+
+        /* 👇 دکمه صفحه اصلی پایین سمت راست */
+        .home-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .home-btn input[type="submit"] {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 30px; /* بزرگ‌تر */
+            font-size: 15px;    /* بزرگ‌تر */
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .home-btn input[type="submit"]:hover {
+            background-color: white;
+            color: black;
         }
     </style>
 </head>
@@ -46,7 +68,11 @@
 <body>
     <p>گل بانو ؟</p>
 
-    <!-- 👇 اینجا عکس خودتو بذار -->
     <img src="kol.png.png" alt="عکس گل بانو">
+
+    <!-- دکمه صفحه اصلی -->
+    <form action="gol2.html" class="home-btn">
+        <input type="submit" value="صفحه اصلی">
+    </form>
 </body>
 </html>

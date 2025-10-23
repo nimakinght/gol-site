@@ -12,17 +12,41 @@
             align-items: center;       /* وسط افقی */
             justify-content: center;   /* وسط عمودی */
             font-family: sans-serif;
+            position: relative;        /* برای دکمه پایین سمت راست */
         }
 
         p {
             font-size: 50px;
-            margin-bottom: 20px; /* فاصله بین نوشته و عکس */
+            margin-bottom: 20px; 
             transform: translateY(10px); /* نوشته رو کمی بالاتر میاره */
         }
 
         img {
-            width: 550px; /* اندازه‌ی عکس (می‌تونی تغییرش بدی) */
+            width: 550px; /* اندازه‌ی عکس */
             border-radius: 10px;
+        }
+
+        /* دکمه صفحه اصلی پایین سمت راست */
+        .home-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .home-btn input[type="submit"] {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 30px; /* بزرگ‌تر */
+            font-size: 15px;    /* بزرگ‌تر */
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .home-btn input[type="submit"]:hover {
+            background-color: white;
+            color: black;
         }
     </style>
 </head>
@@ -32,5 +56,9 @@
 
     <!-- 👇 اینجا جای عکس توئه -->
     <img src="csr.jpg" alt="عکس گل آقا">
+
+    <form action="gol2.html" class="home-btn">
+        <input type="submit" value="صفحه اصلی">
+    </form>
 </body>
 </html>

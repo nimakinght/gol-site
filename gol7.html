@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>gol3</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            position: relative;
+        }
+
+        p {
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"] {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 25px; /* 👈 کمی کوچیک‌تر */
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: gray;
+            color: white;
+        }
+
+        .back-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .message {
+            font-size: 30px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="passwordForm">
+        <p>رمز رو بزن:</p>
+        <input type="text" id="passwordInput" placeholder="رمز را وارد کن">
+        <input type="submit" value="Send">
+    </form>
+
+    <div class="message" id="messageBox"></div>
+
+    <!-- 👇 دکمه برگشت -->
+    <form action="gol2.html" class="back-btn">
+        <input type="submit" value="صفحه اصلی">
+    </form>
+
+    <script>
+        const form = document.getElementById("passwordForm");
+        const input = document.getElementById("passwordInput");
+        const message = document.getElementById("messageBox");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // جلوگیری از رفتن به صفحه دیگه
+            if (input.value.trim().toLowerCase() === "btc") {
+                message.textContent = "باریکلاههاا";
+                message.style.color = "lime";
+            } else {
+                message.textContent = "ریدییی 😭";
+                message.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>

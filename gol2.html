@@ -9,7 +9,7 @@
             height: 95vh;
             margin: 0;
             font-family: sans-serif;
-            position: relative; /* برای اینکه دکمه درباره ما موقعیت‌دهی مطلق بگیره */
+            position: relative; /* برای موقعیت‌دهی دکمه‌ها */
         }
 
         h1 {
@@ -51,12 +51,18 @@
             color: white;
         }
 
-        /* 👇 این بخش دکمه درباره ما رو می‌بره پایین سمت راست */
+        /* 👇 دکمه درباره ما پایین راست */
         .about-btn {
             position: absolute;
             bottom: 20px;
             right: 20px;
-            margin: 0;
+        }
+
+        /* 👇 دکمه برگشت پایین چپ */
+        .back-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
         }
     </style>
 </head>
@@ -76,11 +82,19 @@
         <form action="gol5.html">
             <input type="submit" value="سیاه پوست">
         </form>
+        <form action="gol7.html">
+            <input type="submit" value="ساتوشی ناکاماتو">
+        </form>
     </div>
 
-    <!-- 👇 دکمه درباره ما، پایین سمت راست -->
+    <!-- 👇 دکمه درباره ما پایین سمت راست -->
     <form action="gol6.html" class="about-btn">
         <input type="submit" value="درباره ما">
+    </form>
+
+    <!-- 👇 دکمه برگشت پایین سمت چپ -->
+    <form action="index.html" class="back-btn">
+        <input type="submit" value="برگشت">
     </form>
 </body>
 </html>
